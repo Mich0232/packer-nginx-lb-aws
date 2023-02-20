@@ -9,6 +9,16 @@ Custom AMI will contain NGINX service serving as a load balancer.
 `packer` - [How to install Packer](https://developer.hashicorp.com/packer/downloads)
 
 
+## Building
+
+```shell
+cd src && packer build -var-file=variables.pkr.hcl nginx_lb.pkr.hcl 
+```
+
+## Target group API
+
+`API` - [ngx_dynamic_upstream](https://github.com/cubicdaiya/ngx_dynamic_upstream.git)
+
 ## Lower costs 
 
 Using AWS-managed load balancers we cannot select any tier or size of our instance, combining that with no Reserved Instances or Savings Plan features, Application Load Balancers start at ~20 USD per month.
