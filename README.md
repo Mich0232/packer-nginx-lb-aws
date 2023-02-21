@@ -14,12 +14,23 @@ Custom AMI will contain NGINX service serving as a load balancer.
 ```shell
 cd src && packer build -var-file=variables.pkr.hcl nginx_lb.pkr.hcl 
 ```
+[How to install NGINX dynamic module](https://www.youtube.com/watch?v=AsTDPRnBayI)
 
 ## Target group API
 
-[How to install NGINX dynamic module](https://www.youtube.com/watch?v=AsTDPRnBayI)
-
 `API` - [ngx_dynamic_upstream](https://github.com/cubicdaiya/ngx_dynamic_upstream.git)
+
+### Add server to TG
+
+```shell
+curl "http://127.0.0.1:6000/dynamic?upstream=zone_for_backends&add=&server=127.0.0.1:6004"
+```
+
+### Remove server from TG
+
+```shell
+curl "http://127.0.0.1:6000/dynamic?upstream=zone_for_backends&remove=&server=127.0.0.1:6003"
+```
 
 ## Lower costs 
 
