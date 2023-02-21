@@ -17,6 +17,8 @@ cd src && packer build -var-file=variables.pkr.hcl nginx_lb.pkr.hcl
 
 ## Target group API
 
+[How to install NGINX dynamic module](https://www.youtube.com/watch?v=AsTDPRnBayI)
+
 `API` - [ngx_dynamic_upstream](https://github.com/cubicdaiya/ngx_dynamic_upstream.git)
 
 ## Lower costs 

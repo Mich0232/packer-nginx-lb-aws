@@ -95,7 +95,6 @@ build {
     ]
   }
 
-
   provisioner "shell" {
     environment_vars = [
       "NGINX_VERSION=${var.nginx_version}"
