@@ -100,8 +100,7 @@ build {
       "NGINX_VERSION=${var.nginx_version}"
     ]
     scripts   = [
-      "provisioners/10_yum_setup.sh",
-      "provisioners/20_setup_nginx.sh"
+      "provisioners/setup.sh"
     ]
     timeout  = "15m"
   }
